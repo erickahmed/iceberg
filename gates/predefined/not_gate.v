@@ -1,4 +1,4 @@
-module not_gate(a, y);
+module not_gate(y, a);
     input a;
     output y;
 

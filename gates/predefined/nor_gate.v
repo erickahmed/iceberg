@@ -1,13 +1,11 @@
 include "or_gate.v"
 include "not_gate.v"
 
-module nor_gate(a, b, y);
+module nor_gate(y, a, b);
     input a, b;
     output y;
-    logic sel;
+    wire sel;
 
-    always @ (a or b)begin
-        or_gate(a, b, sel);
-        not_gate(sel, y);
-    end
+    or_gate(a, b, sel);
+    not_gate(sel, y);
 endmodule

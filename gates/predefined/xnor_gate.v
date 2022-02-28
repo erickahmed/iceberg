@@ -1,17 +1,16 @@
 include "and_gate.v"
-include "nor_gate.v"
+include "or_gate.v"
 include "not_gate.v"
 
-module xnor_gate(a, b, y);
+module xnor_gate(y, a, b);
     input a, b;
     output y;
-    logic selA, selB, tmpNorA, tmpNorB;
+    wire selA, selB, tmpOrA, tmpOrB, tmpNot;
 
-    always @ (a or b)begin
-        not_gate(a, selA);
-        not_gate(b, selB);
-        and_gate(a, selB, tmpNorA)
-        and_gate(selA, b, tmpNorB)
-        nor_gate(tmpNorA, tmpNorB, y)
-    end
+    not_gate(a, selA);
+    not_gate(b, selB);
+    and_gate(a, selB, tmpOrA);
+    and_gate(selA, b, tmpOrB);
+    or_gate(tmpOrA, tmpOrB, tmpNot);
+    not_gate(tmpNot, y);
 endmodule
