@@ -1,4 +1,4 @@
-include "mux.v"
+include "predefined/mux.v"
 
 module mux_tb();
     reg a,b, sel;

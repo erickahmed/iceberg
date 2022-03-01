@@ -1,10 +1,10 @@
-include "predefined/or_gate.v"
+include "predefined/xnor_gate.v"
 
-module or_tb();
+module xnor_tb();
     reg ta, tb;
     wire ty;
 
-    or_gate dut(y, ta, tb);
+    xnor_gate dut(y, ta, tb);
 
     initial begin
         ta=0, tb=0;

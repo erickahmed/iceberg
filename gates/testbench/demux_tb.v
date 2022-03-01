@@ -1,3 +1,5 @@
+include "predefined/demux.v"
+
 module demux_tb();
     reg a,b, sel;
     output y;

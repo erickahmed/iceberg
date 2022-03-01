@@ -1,4 +1,4 @@
-include "not_gate.v"
+include "predefined/not_gate.v"
 
 module not_tb();
     reg ta;

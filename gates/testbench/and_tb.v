@@ -1,4 +1,4 @@
-include "and_gate.v"
+include "predefined/and_gate.v"
 
 module and_tb();
     reg ta,tb;

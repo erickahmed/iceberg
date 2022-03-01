@@ -1,4 +1,4 @@
-include "nand_gate.v"
+include "predefined/nand_gate.v"
 
 module nand_tb();
     reg ta,tb;
