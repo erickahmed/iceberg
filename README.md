@@ -7,4 +7,5 @@ Square One is a virtual computer built from scratch, starting from the logic gat
 The gates are designed following a behavioural modelling philosophy (mostly for learning purposes, even though a data flow modelling system would be preferible for big projects)
 
 ## Resources
-- Online Verilog Compiler: https://www.tutorialspoint.com/compile_verilog_online.php
+- Online Verilog Compiler:  https://www.tutorialspoint.com/compile_verilog_online.php
+- Online FPGA Simulator:    https://simulator.nirajmmenon.com/

@@ -1,6 +1,6 @@
 module mux(y, a, b, sel);
     input a, b, sel;
-    inout y;
+    output y;
     wire notSel, andA, andB;
 
     not(notSel, sel);
