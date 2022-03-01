@@ -1,4 +1,4 @@
-module band16(y16, a16, b16);
+module nand16(y16, a16, b16);
     input [15:0]a16;
     input[15:0]b16;
     output [15:0]y16;
