@@ -1,4 +1,7 @@
+# Verilog files
 *.v    text diff=verilog
 *.vh   text diff=verilog
+
+# Systemverilog files
 *.sv   text diff=systemverilog
 *.svh  text diff=systemverilog
