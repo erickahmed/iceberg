@@ -1,6 +1,6 @@
-'include "cpu/alu/halfadder.sv"
+import halfadder::*;
 
-module adder (
+package adder (
     output sum_bit,
     output carry_bit,
     input a,
@@ -15,4 +15,4 @@ xor sum_final(sum_bit, tmpXor0, c);
 and carry_tmp0(tmpAnd1, tmpXor0, c);
 or carry_final(carry_bit, tmpAnd0, tmpAnd1);
 
-endmodule
+endpackage

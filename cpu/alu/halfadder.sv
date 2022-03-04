@@ -1,4 +1,4 @@
-module halfadder (
+package halfadder (
     output sum_bit,
     output carry_bit,
     input a,
@@ -8,4 +8,4 @@ module halfadder (
 xor sum_g(sum_bit, a, b);
 and carry_g(carry_bit, a, b);
 
-endmodule
+endpackage
