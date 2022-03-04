@@ -1,7 +1,7 @@
 # Square One - From logic gates to 16-bit OS
 Square One is a virtual computer built from scratch, starting from the logic gates and CPU to an assembler and compiler, whilst at the very high level Java is implemented-
 
-## Architechture
+## Architecture
 
 ### Logic Gates (path: /gates)
 Logic gates are the lowest level point from which this project is implemented. They are written in Verilog and then simulated using iverilog on a dedicated testbench, and any FPGA simulator will actually work. See Resources for an online 16-bit FPGA simulator.
@@ -42,8 +42,6 @@ Testbenches are a way to test the implementation of a particular gate using a Ve
 Ex: testbench for a xor gate:
 
 '''
-include "gates/predefined/xor_gate.v"
-
 module xor_tb();
     reg ta, tb;
     wire ty;
