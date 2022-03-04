@@ -1,4 +1,4 @@
-include "demux4way16.v";
+'include "demux4way16.v"
 
 module demux8way(out0, out1, out3, out4, out5, out6, out7, i0, i1, i2, i3, sel);
     input [15:0]i0;

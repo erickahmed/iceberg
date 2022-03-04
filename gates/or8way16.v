@@ -1,4 +1,4 @@
-include "or16.v"
+'include "or16.v"
 
 module or8way16(out, i0, i1, i2, i3, i4, i5, i6, i7);
     input [15:0]i0;

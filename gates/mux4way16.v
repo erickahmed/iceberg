@@ -1,13 +1,13 @@
-include "and16.v"
-include "not16.v"
-include "or4way.v"
+'include "and16.v"
+'include "not16.v"
+'include "or4way.v"
 
 module mux4way16(out, i0, i1, i2, i3, sel);
     input [15:0]i0;
     input [15:0]i1;
     input [15:0]i2;
     input [15:0]i3;
-    input [2:0]sel;
+    input [1:0]sel;
     output [15:0]out;
     wire [15:0]tmp0;
     wire [15:0]tmp1;

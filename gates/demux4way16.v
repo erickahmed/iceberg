@@ -1,4 +1,4 @@
-include "demux.v";
+'include "demux.v"
 
 module demux4way(out0, out1, out2, out3, i0, i1, sel);
     input [15:0]i0;
