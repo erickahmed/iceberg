@@ -1,7 +1,7 @@
 module mux16(y16, a16, b16, sel);
     input [15:0] a16;
     input[15:0] b16;
-    input [1:0]sel;
+    input sel;
     output [15:0] y16;
 
     mux(y16[0],  a16[0],  b16[0],  sel);
