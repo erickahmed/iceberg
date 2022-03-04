@@ -9,8 +9,8 @@ Most of the gates also have a 16-bit version and eventually a n-way version (som
 
 Ex: a 4-way mux gate:
 '''
-include "mux.v";
-include "or4way.v";
+include "mux.v"
+include "or4way.v"
 
 module mux4way(out, i0, i1, i2, i3, sel0, sel1);
     input i0, i1, i2, i3;
