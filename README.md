@@ -9,7 +9,8 @@ Most of the gates also have a 16-bit version and eventually a n-way version (som
 
 Ex: a 4-way mux gate:
 
-'''
+
+
     module mux4way(out, i0, i1, i2, i3, sel0, sel1);
         input i0, i1, i2, i3;
         input [3:0]sel;
@@ -28,8 +29,7 @@ Ex: a 4-way mux gate:
         and(tmp3, i3, sel1);
 
         or4way(out, tmp0, tmp1, tmp2, tmp3);
-    endmodule
-'''
+    endmodule 
 
 #### Predefined gates (path: /gates/predefined)
 The predefined gates are by default implemented on Verilog/Systemverilog. Thus they are not strictly needed for building more advanced gates or chipset, but I still decided to add them as reference and learning purposes.
