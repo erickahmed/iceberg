@@ -12,14 +12,14 @@ package alu (
     output [2:0] flag
 );
 
-assign za = sel[0];    // if zx=1, a=0
-assign na = sel[1];    // if nx=1, a=!a
-assign zb = sel[2];    // if zy=1, b=0
-assign nb = sel[3];    // if nx=1, b=!b
-assign f  = sel[4];    // if f=0 -> a&b; else -> a+b
-assign no = sel[5];    // if no=1, out=!out
+assign za = sel[0];  // if zx=1, a=0
+assign na = sel[1];  // if nx=1, a=!a
+assign zb = sel[2];  // if zy=1, b=0
+assign nb = sel[3];  // if nx=1, b=!b
+assign f  = sel[4];  // if f=0 -> a&b; else -> a+b
+assign no = sel[5];  // if no=1, out=!out
 
-wire [15:0]zero16 = 0;
+wire [15:0] zero16 = 15'b0000000000000000;
 
 always @(*) begin
 
@@ -47,12 +47,12 @@ always @(*) begin
         alu_out = tmpOut;
     end
 
-    if (alu_out == 0)
-        flag = 0;   // zero flag
-    else if (alu_out < 0)
-        flag = 1;   // negative flag
+    if (alu_out < 0)
+        flag = 0;   // negative flag
+    else if (alu_out = 0)
+        flag = 1;   // zero flag
     else if
-        flag = 2    // positive flag
+        flag = 2   // positive flag
     end
 
 endpackage

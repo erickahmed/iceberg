@@ -9,7 +9,7 @@ package adder16 (
     wire [15:0]c
 );
 
-lookahead(c, a, b);
+c = lookahead(c, a, b);
 
 adder(sum16[0], carry16[0] = c[0], a16[0], b16[0],);
 adder(sum16[1], carry16[1] = c[1], a16[1], b16[1]);
