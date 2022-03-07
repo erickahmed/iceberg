@@ -10,6 +10,7 @@ Most of the gates also have a 16-bit version and eventually a n-way version (som
 Ex: a 4-way mux gate:
 
 '''
+
 module mux4way(out, i0, i1, i2, i3, sel0, sel1);
     input i0, i1, i2, i3;
     input [3:0]sel;
@@ -30,6 +31,7 @@ module mux4way(out, i0, i1, i2, i3, sel0, sel1);
     or4way(out, tmp0, tmp1, tmp2, tmp3);
 
 endmodule
+
 '''
 
 #### Predefined gates (path: /gates/predefined)
@@ -61,6 +63,7 @@ The ALU is written is Systemverilog (such as the CPU and other complex component
     x|y
 
 The 6-bit opcode gets divided in single bits and refered to as:
+
     za
     na
     zb
@@ -86,9 +89,11 @@ And the 2-bit sign flag is:
 ## Usage
 #### Verilog/Systemverilog logic gates
 To run any Verilog (.v) or Systemverilog (.sv) file, use *iverilog* (available for Windows, Linux and MacOS) using the command:
+
     >> iverilog filename.v
 
 To visually see the functioning of a gate and it's testbench you need to use *gtkwave* and have a .vcd file of the gate (plus eventually the testbench, in the same file):
+
     >> gtkwave filename.vcd
 
 ## Resources
