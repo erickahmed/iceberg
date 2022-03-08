@@ -9,29 +9,28 @@ Most of the gates also have a 16-bit version and eventually a n-way version (som
 
 Ex: a 4-way mux gate:
 
-'''
 
-    module mux4way(out, i0, i1, i2, i3, sel0, sel1);
-        input i0, i1, i2, i3;
-        input [3:0]sel;
-        output [3:0]out;
-        wire tmp0, tmp1, tmp2, tmp3;
+```v
+module mux4way(out, i0, i1, i2, i3, sel0, sel1);
+    input i0, i1, i2, i3;
+    input [3:0]sel;
+    output [3:0]out;
+    wire tmp0, tmp1, tmp2, tmp3;
+    
+    wire [3:0] [1:0] sel0 = sel;
+    wire [0:3] [1:0] sel1 = sel;
 
-        wire [3:0] [1:0] sel0 = sel;
-        wire [0:3] [1:0] sel1 = sel;
+    not(notSel0, sel0);
+    not(notSel1, sel1);
 
-        not(notSel0, sel0);
-        not(notSel1, sel1);
+    and(tmp0, i0, notSel0);
+    and(tmp1, i1, sel0);
+    and(tmp2, i2, notSel1);
+    and(tmp3, i3, sel1);
 
-        and(tmp0, i0, notSel0);
-        and(tmp1, i1, sel0);
-        and(tmp2, i2, notSel1);
-        and(tmp3, i3, sel1);
-
-        or4way(out, tmp0, tmp1, tmp2, tmp3);
-    endmodule
-
-'''
+    or4way(out, tmp0, tmp1, tmp2, tmp3);
+endmodule 
+```
 
 #### Predefined gates (path: /gates/predefined)
 The predefined gates are by default implemented on Verilog/Systemverilog. Thus they are not strictly needed for building more advanced gates or chipset, but I still decided to add them as reference and learning purposes.
@@ -91,12 +90,13 @@ Testbenches are a way to test the implementation of a particular gate using a Ve
 ## Usage
 #### Verilog/Systemverilog logic gates
 To run any Verilog (.v) or Systemverilog (.sv) file, use *iverilog* (available for Windows, Linux and MacOS) using the command:
-
-    >> iverilog filename.v
-
+```bash
+>> iverilog filename.v
+```
 To visually see the functioning of a gate and it's testbench you need to use *gtkwave* and have a .vcd file of the gate (plus eventually the testbench, in the same file):
-
-    >> gtkwave filename.vcd
+```bash
+>> gtkwave filename.vcd
+```
 
 ## Resources
 - Online Verilog Compiler:  https://www.tutorialspoint.com/compile_verilog_online.php
