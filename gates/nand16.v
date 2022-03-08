@@ -1,6 +1,6 @@
 module nand16(y16, a16, b16);
     input [15:0]a16;
-    input[15:0]b16;
+    input [15:0]b16;
     output [15:0]y16;
 
     nand(y16[0], a16[0], b16[0]);
