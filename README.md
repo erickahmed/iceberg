@@ -16,7 +16,7 @@ module mux4way(out, i0, i1, i2, i3, sel0, sel1);
     input [3:0]sel;
     output [3:0]out;
     wire tmp0, tmp1, tmp2, tmp3;
-    
+
     wire [3:0] [1:0] sel0 = sel;
     wire [0:3] [1:0] sel1 = sel;
 
@@ -29,7 +29,7 @@ module mux4way(out, i0, i1, i2, i3, sel0, sel1);
     and(tmp3, i3, sel1);
 
     or4way(out, tmp0, tmp1, tmp2, tmp3);
-endmodule 
+endmodule
 ```
 
 #### Predefined gates (path: /gates/predefined)
@@ -83,9 +83,15 @@ And the 2-bit sign flag is:
     1 (if output = 0)
     2 (if output > 0)
 
+### Memory
 
-## Testbenches (path: /testbenches)
-Testbenches are a way to test the implementation of a particular gate using a Verilog compiler. They output a set of I/O command to test the correct implementation of a given gate.
+
+### Assembler
+
+
+### Compiler
+
+
 
 ## Usage
 #### Verilog/Systemverilog logic gates
