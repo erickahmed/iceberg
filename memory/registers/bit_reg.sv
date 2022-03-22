@@ -1,4 +1,4 @@
-import d_flipflop::scope;
+import d_flipflop::*;
 
 package bit_reg (
     input in;
