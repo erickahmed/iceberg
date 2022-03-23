@@ -47,7 +47,7 @@ always @(*) begin
         alu_out = tmpOut;
     end
 
-    //TODO: improve this part using increment/decrement logic
+    //TODO: improve following using increment/decrement logic
     if (alu_out < 0)
         flag = 0;   // negative flag
     else if (alu_out = 0)
