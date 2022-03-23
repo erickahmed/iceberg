@@ -1,5 +1,5 @@
-# Square One - From logic gates to 16-bit OS
-Square One is a virtual computer built from scratch, built starting from the logic gates and CPU to an assembler and compiler, whilst at the very high level Java is implemented.
+# Iceberg - From logic gates to 16-bit OS
+Iceberg is a virtual computer built from scratch, built starting from the logic gates and CPU to an assembler and compiler, whilst at the very high level Java is implemented.
 
 ## Architecture
 
