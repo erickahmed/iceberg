@@ -1,6 +1,8 @@
 # Iceberg - From logic gates to 16-bit OS
 Iceberg is a virtual computer built from scratch, built starting from the logic gates and CPU to an assembler and compiler, whilst at the very high level Java is implemented.
 
+I was inspired by the Nand2Tetris course where they used a simpler HDL, an easy assembly dialect and a Java-like language to teach various notions about Computer Architecture. I thought that it would be fun to recreate the same thing but using languages that are commonly used in the industry.
+
 ## Architecture
 
 ### Logic Gates (path: /gates)
