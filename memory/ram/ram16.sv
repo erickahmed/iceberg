@@ -29,14 +29,14 @@ wire [7:0]out5;
 wire [7:0]out6;
 wire [7:0]out7;
 
-ram8 ram0(in0, addr0, load, clk, out0);
-ram8 ram1(in1, addr0, load, clk, out1);
-ram8 ram2(in2, addr0, load, clk, out2);
-ram8 ram3(in3, addr0, load, clk, out3);
-ram8 ram4(in4, addr1, load, clk, out4);
-ram8 ram5(in5, addr1, load, clk, out5);
-ram8 ram6(in6, addr1, load, clk, out6);
-ram8 ram7(in7, addr1, load, clk, out7);
+ram8 clstr0(in0, addr0, load, clk, out0);
+ram8 clstr1(in1, addr0, load, clk, out1);
+ram8 clstr2(in2, addr0, load, clk, out2);
+ram8 clstr3(in3, addr0, load, clk, out3);
+ram8 clstr4(in4, addr1, load, clk, out4);
+ram8 clstr5(in5, addr1, load, clk, out5);
+ram8 clstr6(in6, addr1, load, clk, out6);
+ram8 clstr7(in7, addr1, load, clk, out7);
 
 wire   [7:0] [63:0] out0 = out;
 wire  [15:8] [63:0] out1 = out;
