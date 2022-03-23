@@ -38,13 +38,13 @@ ram8 clstr5(in5, addr1, load, clk, out5);
 ram8 clstr6(in6, addr1, load, clk, out6);
 ram8 clstr7(in7, addr1, load, clk, out7);
 
-wire   [7:0] [63:0] out0 = out;
-wire  [15:8] [63:0] out1 = out;
-wire [24:15] [63:0] out2 = out;
-wire [31:24] [63:0] out3 = out;
-wire [39:31] [63:0] out4 = out;
-wire [47:39] [63:0] out5 = out;
-wire [55:47] [63:0] out6 = out;
-wire [63:55] [63:0] out7 = out;
+wire [7:0]   [7:0] out0 = out;
+wire [7:0]  [15:8] out1 = out;
+wire [7:0] [24:15] out2 = out;
+wire [7:0] [31:24] out3 = out;
+wire [7:0] [39:31] out4 = out;
+wire [7:0] [47:39] out5 = out;
+wire [7:0] [55:47] out6 = out;
+wire [7:0] [63:55] out7 = out;
 
 endpackage
