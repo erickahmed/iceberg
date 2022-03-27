@@ -1,8 +1,4 @@
-section.text
-    global main
-
-main:
-
+.model small
 
 section.data
     ; allocating n.8 16-bit registers
@@ -22,4 +18,7 @@ section.data
     dw THIS 3
     dw THAT 4
 
-; section.bss
+section.text
+    global main
+
+main:

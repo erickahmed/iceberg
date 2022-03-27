@@ -1,11 +1,11 @@
 .model small
 
-section
-    global main
-
 section .data
     a db 8
     b db 3
+
+section .text
+    global main
 
 main:
     ; initialization
