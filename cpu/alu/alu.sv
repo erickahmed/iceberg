@@ -12,10 +12,10 @@ package alu (
     output [2:0] flag
 );
 
-assign za = sel[0];  // if zx=1, a=0
-assign na = sel[1];  // if nx=1, a=!a
-assign zb = sel[2];  // if zy=1, b=0
-assign nb = sel[3];  // if nx=1, b=!b
+assign za = sel[0];  // if za=1, a=0
+assign na = sel[1];  // if na=1, a=!a
+assign zb = sel[2];  // if zb=1, b=0
+assign nb = sel[3];  // if nb=1, b=!b
 assign f  = sel[4];  // if f=0 -> a&b; else -> a+b
 assign no = sel[5];  // if no=1, out=!out
 
