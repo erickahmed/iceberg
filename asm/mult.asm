@@ -7,9 +7,6 @@ section .data
     a db 8
     b db 3
 
-section .bss
-    res db
-
 main:
     ; initialization
     mov ax, @data
@@ -30,5 +27,7 @@ main:
     mov ah, 02
     int 21h
 
+    ; terminate program
     mov ah, 04Ch
     int 21h
+    end
