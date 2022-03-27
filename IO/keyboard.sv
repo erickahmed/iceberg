@@ -8,6 +8,7 @@ case(out)
     1 :
         out = 15'b0000000000000001;
         break
+    //TODO: create all keyboard cases
     default:
     0 :
         out = 15'b0000000000000000;
