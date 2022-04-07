@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "assembler/assembler.c"
+#include "compiler/compiler.c"
+
+
 // Logic gates Verilog files
 char gates[][32] =  {"gates/and8way.v",
                     "and8way16.v"
@@ -21,6 +25,7 @@ char cpu[][32]  =   {"cpu/alu/alu.sv",
                     "cpu/cpu.sv"
                     };
 
+//FIXME:: can read folder and output every file name? then choose what to run??
 //TODO: read all files and choose what file execute
 char input[][32] =  {"asm/mult.asm",
                     "asm/example.asm"
@@ -38,6 +43,8 @@ int main(int argc, int *argv) {
     bool load = FALSE;
     bool quit = FALSE;
 
+    // startup and load->TRUE
+
     // Load *.sv subsystem files
     if (load == TRUE) {
         // Load logic gates
@@ -52,7 +59,15 @@ int main(int argc, int *argv) {
             import_sv(cpu[i]); }
         }
 
+    //TODO: NEXT STUFF TO DO
+    // read files, create a general logic to read *.sv, start cpu and use any other chip as needed,
+    // included in a file, like a tree of inclusions(?)
 
+    // user choose high level language program, compiler compiles (duh) to maachine code;
+    // assembly assembles (double-duh) the program, we read assembled program (binary opcodes) which inputs are feed
+    // to the rom, which will send to the cpu
+
+    // maybe also load os-like assembled program, that allocates stuff or do useful things before running programs?
 
 
     if(quit == TRUE) {
