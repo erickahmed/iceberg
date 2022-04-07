@@ -86,7 +86,8 @@ And the 2-bit sign flag is:
     2 (if output > 0)
 
 ### Memory
-
+The memory is also created from scratch, starting from a single-bit register that helps in the building of several types of flipflops, that will then be used to create defferent sizes of RAMs, a program counter, and a ROM.
+The final volatile memory will be a 24Kb RAM: 16Kb of general purpose memory, 8Kb allocated for screen memory and 16-bit for keyboard input.
 
 ### Assembler
 
