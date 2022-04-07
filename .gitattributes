@@ -1,7 +1,11 @@
 # Verilog files
-*.v    text diff=verilog
-*.vh   text diff=verilog
+*.v     text diff=verilog
+*.vh    text diff=verilog
 
 # Systemverilog files
-*.sv   text diff=systemverilog
-*.svh  text diff=systemverilog
+*.sv    text diff=systemverilog
+*.svh   text diff=systemverilog
+
+# C files
+*.c     text diff=c
+*.h     text diff=c
