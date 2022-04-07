@@ -1,6 +1,6 @@
 import ram4096::*;
 
-module ram16384 (
+package ram16384 (
     input [16384:0]in;
     input [13:0]addr;
     input load;
@@ -31,4 +31,4 @@ wire [4095:0]   [8191:4095] out1 = out;
 wire [4095:0]  [12287:8191] out2 = out;
 wire [4095:0] [16383:12287] out3 = out;
 
-endmodule
+endpackage
