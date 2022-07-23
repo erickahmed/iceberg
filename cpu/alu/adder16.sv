@@ -11,7 +11,7 @@ package adder16 (
 
 c = lookahead(c, a, b);
 
-adder(sum16[0], carry16[0] = c[0], a16[0], b16[0],);
+adder(sum16[0], carry16[0] = c[0], a16[0], b16[0]);
 adder(sum16[1], carry16[1] = c[1], a16[1], b16[1]);
 adder(sum16[2], carry16[2] = c[2], a16[2], b16[2]);
 adder(sum16[3], carry16[3] = c[3], a16[3], b16[3]);
